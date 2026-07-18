@@ -112,23 +112,7 @@ cd Bookstore-manager-cli
 npm install
 ```
 
-### 4. Configurar as variáveis de ambiente
-
-Crie um arquivo `.env` na raiz do projeto, seguindo as configurações utilizadas na conexão com o PostgreSQL.
-
-Exemplo:
-
-```env
-DB_HOST=localhost
-DB_PORT=5432
-DB_USER=postgres
-DB_PASSWORD=sua_senha
-DB_NAME=bookstore
-```
-
-O arquivo `.env` não deve ser enviado ao GitHub.
-
-### 5. Iniciar o PostgreSQL
+### 4. Iniciar o PostgreSQL
 
 Utilizando Docker Compose:
 
@@ -142,7 +126,7 @@ Caso o contêiner já tenha sido criado:
 docker start bookstore-postgres
 ```
 
-### 6. Criar a estrutura do banco
+### 5. Criar a estrutura do banco
 
 Execute o arquivo:
 
@@ -150,7 +134,7 @@ Execute o arquivo:
 sql/schema.sql
 ```
 
-### 7. Popular o banco
+### 6. Popular o banco
 
 Execute o arquivo:
 
@@ -158,13 +142,13 @@ Execute o arquivo:
 sql/seed.sql
 ```
 
-### 8. Compilar o projeto
+### 7. Compilar o projeto
 
 ```bash
 npx tsc
 ```
 
-### 9. Executar a aplicação
+### 8. Executar a aplicação
 
 ```bash
 node dist/index.js
